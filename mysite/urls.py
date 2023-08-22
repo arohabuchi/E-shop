@@ -14,9 +14,23 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.contrib.auth.models import Group
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', include('shop.urls')),
+    path('cart/', include('cart.urls')),
+    path('authentication/', include('Authen.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+admin.site.site_header = "Anuke Administration"
+admin.site.site_title = "Anuke Administration"
+admin.site.site_index_title = " welcome to Anuke Administration"
+admin.site.unregister(Group)

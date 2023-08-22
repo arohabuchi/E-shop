@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home{% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide vheight" data-bs-ride="carousel">
+    <div class="carousel-inner vheight">
+      
+      <div class="carousel-item active ">
+        <img  height="90%" src="{% static 'shop/images/images (24).jpeg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item ">
+        <img  height="90%" src="{% static 'shop/images/laptop-computer.jpg' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img height="90%" src="{% static 'shop/images/images (48).jpeg' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item ">
+        <img height="90%" src="{% static 'shop/images/images (38).jpeg' %}"  class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+{% endblock banner-slider %}
+
+{% block info-block %}
+<div class="container">
+  <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+    <h1>Products</h1>
+    <small class="fs-5">I'm Eran, the Co-Founder, and CTO at Tabnine. On behalf of the entire team, thanks for taking the time to give Tabnine a try.
+
+      We're really proud of what we've built, but we know there is always room to improve. We're hoping that your feedback will play a big part in helping us take Tabnine to the next level.</small>
+  </div>
+</div>
+{% endblock info-block  %}
+
+{% block main-content %}
+   <div class="container">
+    <h2 class="text-center">Anuke Shop Products</h2> <br><br> 
+    <div class="row container">
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk smbg">
+          <a href="{% url 'category' 'ls' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (51).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Ladies Shoes</p>
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk curdbgpro">
+          <a href="{% url 'category' 'ms' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (49).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Men Shoes</p>
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk buttermilk">
+          <a href="{% url 'category' 'ph' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (41).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Phones</p>
+
+          </a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="row container">
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk smbg">
+          <a href="{% url 'category' 'el' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (15).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Electronics</p>
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk curdbgpro">
+          <a href="{% url 'category' 'fs' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/download (3).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">foodstuff</p>
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk buttermilk">
+          <a href="{% url 'category' 'am' %}" class="goodnessseccont text-center">
+            <img src="{% static 'shop/images/images (32).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Auto Mobile</p>
+
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk buttermilk">
+          <a href="{% url 'category' 'cs' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (31).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Cosmetic</p>
+
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk buttermilk">
+          <a href="{% url 'category' 'el' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (20).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Elecronics</p>
+
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+        <div class="goodnesssec buttermilk buttermilk">
+          <a href="{% url 'category' 'cl' %}" class="goodnessseccont text-center">
+            <img height="220px" src="{% static 'shop/images/images (45).jpeg' %}" class="img-responsive center-block" alt="">
+            <p class="mlkpro">Clothing</p>
+
+          </a>
+        </div>
+      </div>
+    </div>
+   </div>
+   <br/>
+   <br/>
+{% endblock main-content %}
